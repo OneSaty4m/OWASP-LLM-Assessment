@@ -5,7 +5,6 @@ import sys
 SYSTEM_PROMPT_PATTERNS = [
     r'SYSTEM_PROMPT\s*=',
     r'system_message\s*=',
-    r'"role"\s*:\s*"system"',
 ]
 
 INJECTION_PHRASES = [

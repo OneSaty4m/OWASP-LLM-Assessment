@@ -1,1 +1,2 @@
-API_KEY = "DEMO_INSECURE_KEY_FOR_SECURITY_TESTING_12345"
+import os 
+API_KEY = os.environ.get("API_KEY")

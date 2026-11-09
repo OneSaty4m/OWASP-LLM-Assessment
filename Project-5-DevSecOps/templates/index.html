@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Security Chatbot</title>
+</head>
+<body>
+
+    <h2>AI Security Chatbot</h2>
+
+    <input type="text" id="message" placeholder="Enter your message">
+
+    <button onclick="sendMessage()">Send</button>
+
+    <div id="response"></div>
+
+    <script>
+        async function sendMessage() {
+            const message = document.getElementById("message").value;
+
+            const response = await fetch("/chat", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({message: message})
+            });
+
+            const data = await response.json();
+
+            document.getElementById("response").innerText =
+                data.response || data.error;
+        }
+    </script>
+
+</body>
+</html>

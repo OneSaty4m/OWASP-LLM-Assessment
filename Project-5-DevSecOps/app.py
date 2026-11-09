@@ -110,5 +110,3 @@ if __name__ == "__main__":
         debug=False
     )
 
-SYSTEM_PROMPT = "You are a helpful AI assistant."
-test_result = eval("1 + 1")
